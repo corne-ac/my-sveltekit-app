@@ -3,7 +3,7 @@
 	let { children } = $props();
 </script>
 <!-- navbar container -->
-<div class="navbar"> 
+<div class="navbar bg-base-200 mb-10"> 
 
 	<div class="navbar-start">
 		<div class=" hover:text-blue-500">
@@ -15,11 +15,11 @@
 	</div>
 
 	<div class="navbar-center">
-		<ul class="menu menu-horizontal px-1 font-bold ">
-			<li><a href="/about" class="hover:font-extrabold">about</a></li>
-			<li><a href="/">item 1</a></li>
-			<li><a href="/">item 1</a></li>
-			<li><a href="/">item 1</a></li>
+		<ul class="menu menu-horizontal px-1 font-bold text-2xl space-x-3">
+			<li><a href="/about" class="hover:bg-primary">Projects</a></li>
+			<li><a href="/about" class="hover:bg-primary">about</a></li>
+			<li><a href="/about" class="hover:bg-primary">Contact</a></li>
+			<li><a href="/about" class="hover:bg-primary">History</a></li>
 		</ul>
 	</div>
 
