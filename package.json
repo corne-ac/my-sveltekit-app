@@ -32,6 +32,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@supabase/supabase-js": "^2.47.5",
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15"
 	}

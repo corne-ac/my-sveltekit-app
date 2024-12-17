@@ -1,43 +1,41 @@
 <script>
-    /** @type {{ data: import('./$types').PageData }} */
     let { data } = $props();
-</script>
+  </script>
 
-<div class="flex justify-center items-center">
+<div class="flex justify-center items-center flex-col">
     <div class="overflow-x-auto">
-        <table class="table">
+        <table class="table table-lg">
           <!-- head -->
           <thead>
-            <tr>
+            <tr class="text-lg text-neutral-200">
               <th></th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Number</th>
+              <th>Date</th>
+              <th>Time</th>
             </tr>
           </thead>
           <tbody>
-            <!-- row 1 -->
+            {#each data.items as item}
             <tr>
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>Blue</td>
+              <th>{item.id}</th>
+              <td>{item.title}</td>
+              <td>{item.description}</td>
+              <td>{item.number}</td>
+              <td>{item.date}</td>
+              <td>{item.time}</td>
             </tr>
-            <!-- row 2 -->
-            <tr>
-              <th>2</th>
-              <td>Hart Hagerty</td>
-              <td>Desktop Support Technician</td>
-              <td>Purple</td>
-            </tr>
-            <!-- row 3 -->
-            <tr>
-              <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
-              <td>Red</td>
-            </tr>
+            {/each}
           </tbody>
         </table>
+        
+        <div class="flex justify-end items-end pt-10">
+          <a href="/table/add" class="btn btn-neutral hover:btn-primary">
+            Add Row
+          </a>
+        </div>
       </div>
+
+      
 </div>
